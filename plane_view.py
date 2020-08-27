@@ -12,7 +12,7 @@ class PlaneView(object):
 		self.planeImg = pygame.transform.scale(PlaneView.planeImg, (self.plane.width, self.plane.height))
 
 	def draw(self, display):
-		print(self.plane.x, self.plane.y)
+		# print(self.plane.x, self.plane.y)
 		pImg = pygame.transform.rotate(self.planeImg, 360 * self.plane.angle / (2 * math.pi))
 		rect = pImg.get_rect(center=(self.gwidth/2, self.gheight/2))
 		display.blit(pImg, rect.topleft)
